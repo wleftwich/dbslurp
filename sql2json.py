@@ -79,7 +79,7 @@ def copy_row(row, keys, folder, encoding=defaults['encoding']):
 def main(settings):
     config = defaults.copy()
     config.update(settings)
-    meta = dbconnect(settings['connect'])
+    meta = dbconnect(config['connect'])
     meta.reflect(views=config['views_too'])
 
     if config['include_tables']:
