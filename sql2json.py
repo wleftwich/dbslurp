@@ -84,10 +84,10 @@ def main(settings):
 
     if config['include_tables']:
         tables = (meta.tables[x] for x in config['include_tables']
-                    if x not in config['exclude_tables'])
+                    if x not in set(config['exclude_tables']))
     else:
         tables = (x for x in meta.sorted_tables
-                    if x.key not in config['exclude_tables'])
+                    if x.key not in set(config['exclude_tables']))
 
     for table in tables:
         export_table(table,
@@ -101,14 +101,4 @@ if __name__ == '__main__':
     with open(settings_file) as fh:
         settings = json.load(fh)
     main(settings)
-
-
-
-
-
-
-
-
-
-
 
