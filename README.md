@@ -1,5 +1,5 @@
 # Dump SQL database to JSON files
-`db2json.py` will serialize an SQL database to JSON.
+`sql2json.py` will serialize an SQL database to JSON.
  Each table occupies a directory, each row a file.
 
 ## Installation
@@ -7,7 +7,7 @@ The script has been tested with Python 2.7.
 Requires http://sqlalchemy.org plus whatever database adapter is applicable.
 
 ## Usage
-`$ python db2json.py settings.json`
+`$ python sql2json.py settings.json`
 
 ## Configuration
 The script expects a JSON file containing configuration.

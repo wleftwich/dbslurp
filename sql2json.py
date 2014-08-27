@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""db2json.py
+"""sql2json.py
 Dump an SQL database to JSON files.
 Tested with Python 2.7
 Requires sqlalchemy and relevant database library
