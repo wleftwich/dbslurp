@@ -1,0 +1,8 @@
+{
+	"connect": "mysql+mysqldb://aviationweek:aviationweek@localhost/aviationweek?charset=utf8",
+	"output_folder": "dump",
+	"views_too": false,
+	"include_tables": [],
+	"exclude_tables": [],
+	"max_rows": 10
+}

@@ -1,0 +1,9 @@
+{
+	"connect": "mssql+pyodbc://NYNYWLEFTWICH4\\SQLEXPRESS/Penton80_EXPORT",
+	"output_folder": "dump",
+	"views_too": false,
+	"include_tables": [],
+	"exclude_tables": [],
+	"max_rows": 10,
+	"encoding": "cp1252"
+}
