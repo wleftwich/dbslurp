@@ -25,7 +25,7 @@ Example:
 
 - *connect*: sqlalchemy connection string. *Required* -- all other keys have defaults.
 - *output_folder*: defaults to "dump"
-- *encoding*: "encoding" param for json.dump(), only used if db adapter doues not return unicode. Default "utf8"
+- *encoding*: "encoding" param for json.dump(), only used if db adapter does not return unicode. Default "utf8"
 - *include_tables*: defaults to empty list, which means "all"
 - *exclude_tables*: tables to ignore, overriding "include_tables". Defaults to empty list.
 - *views_too*: also export database views
