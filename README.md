@@ -14,13 +14,13 @@ The script expects a JSON file containing configuration.
 Example:
 
     {
-		"connect": "mysql+mysqldb://aviationweek:aviationweek@localhost/aviationweek?charset=utf8",
-		"output_folder": "dump",
-		"encoding": "utf8",
-		"include_tables": [],
-		"exclude_tables": [],
-		"views_too": false,
-		"max_rows": 10
+        "connect": "mysql+mysqldb://aviationweek:aviationweek@localhost/aviationweek?charset=utf8",
+        "output_folder": "dump",
+        "encoding": "utf8",
+        "include_tables": [],
+        "exclude_tables": [],
+        "views_too": false,
+        "max_rows": 10
     }
 
 - *connect*: sqlalchemy connection string. *Required* -- all other keys have defaults.
@@ -38,6 +38,19 @@ Otherwise, each row's filename will be a UUID.
 
 ## JSON serialization defaults
 If json.dump() does not know how to handle a value in a database row, it will first attempt to apply float(). If that fails, it will apply repr().
+
+
+# List tables, counts, keys
+`sqlinfo.py` will print a tab-separated table showing table names, counts, primary keys, foreign keys
+
+## Usage
+`$ python sqlinfo.py settings.json > outputfilename.tsv`
+
+
+## Configuration
+Uses the same json config file as sql2json.py, though only the 'connect' field is required.
+
+
 
 
 
