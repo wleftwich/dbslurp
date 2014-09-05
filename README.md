@@ -41,14 +41,14 @@ If json.dump() does not know how to handle a value in a database row, it will fi
 
 
 # List tables, counts, keys
-`sqlinfo.py` will print a tab-separated table showing table names, counts, primary keys, foreign keys
+`sqlinfo.py` will print a tab-separated report showing table names, counts, primary keys, foreign keys
 
 ## Usage
 `$ python sqlinfo.py settings.json > outputfilename.tsv`
 
 
 ## Configuration
-Uses the same json config file as sql2json.py, though only the 'connect' field is required.
+Uses the same json config file as sql2json.py, though only the 'connect' field is used.
 
 
 
