@@ -5,6 +5,8 @@ Tested with Python 2.7
 Requires sqlalchemy and relevant database library
 """
 
+USAGE = 'Usage: python sqlinfo.py settings.json'
+
 import sys
 import json
 import sqlalchemy as sa
@@ -49,7 +51,14 @@ def main(settings):
 
 
 if __name__ == '__main__':
-    settings_file = sys.argv[1]
+    try:
+        settings_file = sys.argv[1]
+    except IndexError:
+        print USAGE
+        exit(1)
+    if settings_file in ('-h', '--help'):
+        print USAGE
+        exit(0)
     with open(settings_file) as fh:
         settings = json.load(fh)
     main(settings)
